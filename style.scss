@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$blue-100: hsl(246, 25%, 77%);
+$blue-200: hsl(248, 32%, 49%);
+$blue-300: hsla(249, 10%, 26%, 0.807);
+$red: hsl(0, 100%, 74%);
+$green-100: rgba(56, 204, 140, 0.7);
+$green-200: rgb(56, 204, 140);
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-image: url(./images/bg-intro-mobile.png);
+    background-size: 100%;
+    background-color: $red;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container{
+        max-width: 85%;
+        max-height: 90%;
+        .main-section{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            padding-bottom: 2rem;
+            .left-side{
+                text-align: center;
+                h1{
+                    color: white;
+                    padding-bottom: 1.5rem;
+                    font-size: 26px;
+                }
+                p{
+                    color: white;
+                }
+            }
+            .right-side{
+                width: 100%;
+                .trial{
+                    display: flex;
+                    justify-content: center;
+                    background-color: $blue-200;
+                    border-radius: 0.5rem;
+                    text-align: center;
+                    margin-bottom: 2rem;
+                    box-shadow: 0px 8px 0px 0px rgb(0 0 0 / 15%);
+                    p{
+                        color: rgba(255, 255, 255, 0.8);
+                        padding: 1rem 0;
+                        width: 60%;
+                        span{
+                            font-weight: 600;
+                            color: white;
+                        }
+                    }
+                }
+                >.form{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: white;
+                    border-radius: 0.5rem;
+                    text-align: center;
+                    box-shadow: 0px 8px 0px 0px rgb(0 0 0 / 15%);
+                    form{
+                        display: flex;
+                        width: 90%;
+                        align-items: center;
+                        flex-direction: column;
+                        padding-top: 0.5rem;
+                        ::placeholder{
+                            font-family: 'Poppins', sans-serif;
+                            color: $blue-300;
+                            font-weight: 700;
+                        }
+                        div{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            margin-top: 1rem;
+                            border: 1px solid hsl(246deg 25% 77% / 60%);
+                            border-radius: 0.4rem;
+                            input{
+                                width: 100%;
+                                padding: 1.2rem 1rem;
+                                border: none;
+                            }
+                            .att{
+                                position: relative;
+                                right: 2rem;
+                                visibility: hidden;
+                            }
+                        }
+                        
+                        section{
+                            font-style: italic;
+                            width: 100%;
+                            text-align: end;
+                            font-size: 14px;
+                        }
+                        button{
+                            width: 100%;
+                            margin: 1rem 0;
+                            padding: 1rem 0 0.7rem 0;
+                            border: none;
+                            color: white;
+                            text-transform: uppercase;
+                            background-color: $green-200;
+                            border-radius: 0.4rem;
+                            font-family: 'Poppins', sans-serif;
+                            font-weight: 500;
+                            font-size: inherit;
+                            cursor: pointer;
+                            box-shadow: 0px 4px 0px 0px rgb(25 183 115);
+                        }
+                        button:hover{
+                            background-color: $green-100;
+                            box-shadow: 0px 4px 0px 0px rgba(25, 183, 115, 0.7);
+                        }
+                        button:active, button:focus {
+                            outline: none !important;
+                        }
+                    }
+                    p{
+                        width: 80%;
+                        color: $blue-100;
+                        padding: 0 0 1.5rem 0;
+                        font-size: 12px;
+                        span{
+                            color: $red;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    body{
+        background-image: url(./images/bg-intro-desktop.png);
+    }
+    main{
+        .container{
+            max-width: 80%;
+            .main-section{
+                flex-direction: row;
+                padding-bottom: 0;
+                .left-side{
+                    width: 100%;
+                    text-align: start;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    h1{
+                        font-size: 58px;
+                        line-height: 4rem;
+                    }
+                    p{
+                        width: 90%;
+                    }
+                }
+                .right-side{
+                    .trial{
+                        p{
+                            width: 90%;
+                        }
+                    }
+                    >.form{
+                        form{
+                            section{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

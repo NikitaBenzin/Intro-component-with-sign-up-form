@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+<body>
+
+  <main>
+    <div class="container">
+      <section class="main-section">
+        <section class="left-side">
+          <h1>Learn to code by <br>watching others</h1>
+          <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+        </section>
+        <section class="right-side">
+          <section class="trial">
+            <p><span>Try it free 7 days </span>then $20/mo. thereafter</p>
+          </section>
+          <section class="form">
+            <form id="form" action="#" class="form" onsubmit="return validation()" method="post">
+              <div>
+                <input id="fname" type="text" name="" placeholder="First Name">
+                <img id="fnameAtt" class="att" src="./images/icon-error.svg" alt="icon error">
+              </div>
+              <section id="fnameError"></section>
+
+              <div>
+                <input id="lname" type="text" name="" placeholder="Last Name">
+                <img id="lnameAtt" class="att" src="./images/icon-error.svg" alt="icon error">
+              </div>
+              <section id="lnameError"></section>
+
+              <div>
+                <input id="email" type="text" name="" placeholder="Email Address">
+                <img id="emailAtt" class="att" src="./images/icon-error.svg" alt="icon error">
+              </div>
+              <section id="emailError"></section>
+
+              <div>
+                <input id="password" type="password" name="" placeholder="Password">
+                <img id="passAtt" class="att" src="./images/icon-error.svg" alt="icon error">
+              </div>
+              <section id="passwordError"></section>
+              <button type="submit">Claim your free trial </button>
+            </form>
+            <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+          </section>
+        </section>
+      </section>
+    </div>
+  </main>
+<script src="./main.js"></script>
+</body>
+</html>
