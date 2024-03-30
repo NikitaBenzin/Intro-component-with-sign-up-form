@@ -1,0 +1,2 @@
+- Mobile / Desktop / Tablet
+- preview: https://nikitabenzin.github.io/Intro-component-with-sign-up-form/
